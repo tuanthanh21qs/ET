@@ -1,0 +1,102 @@
+.sub-menu,
+.nav .children{
+	background-color: #fff;
+	visibility: hidden;
+	opacity: 0;
+	position: absolute;
+	top: 50px;
+	left: 0;
+	border: 2px solid #ddd;
+	z-index: 5;
+	transition: all 0.4s ease-in-out;
+	line-height: normal;
+}
+.sub-menu li,
+.nav .children li{
+	clear: both;
+	display: block;
+	width: 180px;
+	margin: 0;
+	border: none;
+	border-bottom: 1px solid #ddd;
+}
+.sub-menu li:last-child,
+.nav .children li:last-child{
+	border-bottom: none;
+}
+.sub-menu li a,
+.nav .children li a{
+	display: block;
+	padding: 8px 10px;
+	background: none;
+	color: #454545;
+	text-transform: none;
+	text-align: left;
+}
+.sub-menu li a:hover,
+.nav .children li a:hover{
+	background-color: #333;
+	color: #fff;
+}
+.nav li:hover > .sub-menu,
+.nav li:hover .children{
+	visibility: visible;
+	opacity: 1;
+	top: 40px;
+	transition: all 0.2s ease-in-out;
+}
+.nav > ul > li .sub-menu .sub-menu,
+.nav li:hover > .sub-menu .sub-menu,
+.nav > ul > li .children .children,
+.nav li:hover > .children .children{
+	left: 185px;
+	top: -3px;
+}
+.nav > ul > li:last-child .sub-menu,
+.nav > ul > li:last-child .children{
+	right: 0;
+	left: auto;
+}
+.nav li:last-child .sub-menu .sub-menu,
+.nav li:last-child .children .children{
+	right: 185px;
+	left: auto;
+}
+.nav-vertical .sub-menu,
+.nav-vertical .children{
+	left: 180px;
+	right: auto;
+	top: -3px;
+	box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.05);
+}
+.nav-vertical li:hover > .sub-menu,
+.nav-vertical li:hover > .children{
+	top: -3px;
+	left: 140px;
+}
+.nav-vertical li:hover > .sub-menu .sub-menu,
+.nav-vertical li:hover > .chilren .children{
+	left: 155px;
+	right: auto;
+	top: -3px;
+}
+#footer .sub-menu{
+	display: none;
+}
+
+.nav-absolute{
+	position: absolute;
+	width: 100%;
+	padding: 5px 10px;
+	color: #999;
+	font-size: 1.2rem;
+}
+.nav-absolute li{
+	display: inline;
+}
+.nav-absolute a{
+	color: #ccc;
+}
+.nav-absolute a:hover{
+	color: #fff;
+}
